@@ -9,6 +9,7 @@
  |-- packages
    |--- shared
  |-- docs
+ |-- infra
 
 
 ## 2. Docker Compose для dev
