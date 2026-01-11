@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "dev": "npm run infra:up",
 

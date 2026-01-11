@@ -11,3 +11,33 @@ infra/.env.*
 
 # VS Code
 .vscode/*
+
+# Node.js dependencies
+node_modules/
+.pnp.*
+.pnp/
+.pnpm-store/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# Framework/tooling caches
+.next/
+.nuxt/
+.output/
+.vite/
+.turbo/
+
+# OS files
+.DS_Store
+Thumbs.db
