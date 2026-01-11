@@ -1,1 +1,3 @@
-// API entrypoint lives here.
+import "./env.js";
+
+// Server start will live here.

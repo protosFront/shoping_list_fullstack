@@ -7,7 +7,9 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "npm run infra:up",
+    "dev": "npm run infra:up && npm run api:dev",
+    
+    "api:dev": "npm run --workspace apps/api dev",
 
     "dev:down": "npm run infra:down",
     "dev:reset": "npm run infra:reset",
