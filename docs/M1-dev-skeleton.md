@@ -23,14 +23,14 @@
  - понятные команды запуска (в идеале в корневых scripts/Makefile)
  
 ### FLOW
-  1. docker compose up -d поднимает PostgreSQL без ошибок и она healthy. - 
-  2. Есть артефакты в репе: -
-    - docker-compose.yml (или /infra/docker-compose.dev.yml — если так решил) -
-    - .env.example -
-    - короткий runbook в docs/ “как запустить dev” (1 экран текста). -
-  3. Нет “демо-грехов”: -
-    - .env в .gitignore -
-    - никаких паролей/токенов в коммитах. -
+  1. docker compose up -d поднимает PostgreSQL без ошибок и она healthy. +
+  2. Есть артефакты в репе: +
+    - /infra/docker-compose.dev.yml +
+    - .env.example +
+    - короткий runbook в docs/ “как запустить dev” (1 экран текста). +
+  3. Нет “демо-грехов”: +
+    - .env в .gitignore +
+    - никаких паролей/токенов в коммитах. +
 
 ### ЧЕК-ЛИСТ
   - Список изменённых общих файлов (3–10 строк: что именно трогал)
