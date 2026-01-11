@@ -1,0 +1,23 @@
+{
+  "name": "shoping_list_fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "dev": "npm run infra:up",
+
+    "dev:down": "npm run infra:down",
+    "dev:reset": "npm run infra:reset",
+    "dev:ps": "npm run infra:ps",
+    "dev:logs": "npm run infra:logs:db",
+    "dev:restart": "npm run infra:restart",
+    
+    "infra:up": "docker compose --env-file infra/.env -f infra/docker-compose.dev.yml up -d",
+    "infra:down": "docker compose -f infra/docker-compose.dev.yml down",
+    "infra:reset": "docker compose -f infra/docker-compose.dev.yml down -v",
+    "infra:ps": "docker compose -f infra/docker-compose.dev.yml ps",
+    "infra:logs:db": "docker compose -f infra/docker-compose.dev.yml logs -f postgres",
+    "infra:pull": "docker compose -f infra/docker-compose.dev.yml pull",
+    "infra:restart": "npm run infra:down && npm run infra:up"
+  }
+}
