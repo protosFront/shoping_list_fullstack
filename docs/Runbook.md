@@ -18,36 +18,49 @@ cp infra/.env.example infra/.env
 
 Открой `infra/.env` и поменяй `POSTGRES_PASSWORD` на свой dev-пароль.
 
-## 2) Запуск DEV
+## 2) Установка зависимостей (раздельные node_modules)
+Из корня репозитория:
 ```bash
-npm run dev
+npm run api:install
+npm run web:install
 ```
 
-## 3) Проверка статуса
+## 3) Запуск инфраструктуры (Postgres)
 ```bash
-npm run dev:ps
+npm run infra:up
+```
+
+## 4) Запуск приложений (разные терминалы)
+```bash
+npm run api:dev
+npm run web:dev
+```
+
+## 5) Проверка статуса
+```bash
+npm run infra:ps
 ```
 Ожидаем, что сервис `postgres` имеет статус `healthy`.
 
 ## Полезные команды
 Логи базы:
 ```bash
-npm run dev:logs
+npm run infra:logs:db
 ```
 
 Остановить dev (данные сохранятся):
 ```bash
-npm run dev:down
+npm run infra:down
 ```
 
 Сбросить dev (удалит данные БД):
 ```bash
-npm run dev:reset
+npm run infra:reset
 ```
 
 Перезапуск:
 ```bash
-npm run dev:restart
+npm run infra:restart
 ```
 
 ## Если Docker “не видит” движок
@@ -63,4 +76,4 @@ docker context use desktop-linux
 ```powershell
 wsl --shutdown
 ```
-Перезапусти Docker Desktop и повтори `npm run dev`.
+Перезапусти Docker Desktop и повтори `npm run infra:up`.
