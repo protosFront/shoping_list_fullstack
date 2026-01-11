@@ -2,12 +2,17 @@
 
 Короткая инструкция, как поднять API локально. Детали по env: `env-and-config.md`.
 
-## Команды
+## Команды (из корня)
 ```bash
+npm run api:install
 cp apps/api/.env.example apps/api/.env
 npm run api:dev
 ```
-Если запускаешь из `apps/api`, команда: `npm run dev`.
+Если запускаешь из `apps/api`, команды:
+```bash
+npm install
+npm run dev
+```
 
 ## Переменные
 Файл: `apps/api/.env`
