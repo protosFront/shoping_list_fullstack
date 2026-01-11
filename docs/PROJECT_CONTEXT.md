@@ -43,4 +43,4 @@ M0 docs/spec -> M1 dev env skeleton -> M2 backend foundation -> M3 DB schema -> 
 1. Зафиксировать структуру репо на текущем этапе: монорепо (выполнено)
 2. Docker compose для dev поднимает PosеgreSQL одной командой. Создан оркестрирующий package.json в корне. Добавлена соответствующая документация.(выполнено)
 3. Backend skeleton (Fastify + /health) (выполнено)
-4. Web skeleton (Nuxt + ping /health) (в работе)
+4. Web skeleton (Nuxt + ping /health) (выполнено)
