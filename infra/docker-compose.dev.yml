@@ -1,0 +1,30 @@
+name: backend-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: backend-dev-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+    # Доступ к БД только с этого ПК (без публикации в Wi-Fi)
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    
+    # Данные БД
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+    # Готовность БД (для будущего API)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:
