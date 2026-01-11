@@ -3,6 +3,7 @@
 ## Документация
 - Runbook (как запускать dev): `docs/Runbook.md`
 - Контекст проекта: `docs/PROJECT_CONTEXT.md`
+- API docs: `docs/api/README.md`
 
 ## Быстрый старт (dev)
 См. `docs/Runbook.md`.
