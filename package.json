@@ -8,6 +8,7 @@
     "api:dev": "npm --prefix apps/api run dev",
     "web:install": "npm --prefix apps/web install",
     "web:dev": "npm --prefix apps/web run dev",
+    "web:dev:host": "npm --prefix apps/web run dev:host",
 
     "dev:down": "npm run infra:down",
     "dev:reset": "npm run infra:reset",
