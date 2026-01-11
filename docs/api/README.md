@@ -1,11 +1,22 @@
 # API Docs (Dev)
 
-## Что здесь описано
-Документация по локальному API для разработки.
+Короткая инструкция, как поднять API локально. Детали по env: `env-and-config.md`.
 
-## Содержание
-- `env-and-config.md` - как устроен `.env` для API и какие переменные нужны
+## Команды
+```bash
+cp apps/api/.env.example apps/api/.env
+npm run api:dev
+```
+Если запускаешь из `apps/api`, команда: `npm run dev`.
 
-## Быстрый старт
-1) См. `env-and-config.md` -> создать `apps/api/.env`
-2) При старте API значения берутся из `apps/api/.env`
+## Переменные
+Файл: `apps/api/.env`
+- `API_HOST`
+- `API_PORT`
+- `CORS_ORIGIN`
+
+## Проверка
+```bash
+curl -i http://127.0.0.1:3001/health
+```
+Ожидаем `200` и тело `{ "ok": true }`.

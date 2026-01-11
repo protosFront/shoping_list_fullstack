@@ -20,6 +20,12 @@ if (missing.length > 0) {
   process.exit(1);
 }
 
+const corsOrigin = process.env.CORS_ORIGIN?.trim() ?? "";
+if (corsOrigin === "*") {
+  console.error("CORS_ORIGIN must be a specific origin, not '*'.");
+  process.exit(1);
+}
+
 const apiPort = Number(process.env.API_PORT);
 if (!Number.isInteger(apiPort) || apiPort <= 0) {
   console.error("Invalid API_PORT: must be a positive integer.");
@@ -29,5 +35,5 @@ if (!Number.isInteger(apiPort) || apiPort <= 0) {
 export const env = {
   apiHost: process.env.API_HOST as string,
   apiPort,
-  corsOrigin: process.env.CORS_ORIGIN as string,
+  corsOrigin,
 };
