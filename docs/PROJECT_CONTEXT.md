@@ -6,7 +6,7 @@
 Домен простой (список покупок), реализация зрелая.
 
 ## Стек
-- Frontend: Nuxt 3 + TypeScript (+ Tailwind минимально)
+- Frontend: Nuxt 4 + TypeScript (+ Tailwind минимально)
 - Backend: Fastify + TypeScript
 - DB: PostgreSQL + Prisma (migrate + seed)
 - Infra: Docker Compose (dev/prod), Caddy reverse proxy (HTTPS)
