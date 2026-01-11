@@ -6,15 +6,29 @@
 - API docs: `docs/api/README.md`
 
 ## Быстрый старт (dev)
-См. `docs/Runbook.md`.
+1) Установить зависимости отдельно:
+   - `npm run api:install`
+   - `npm run web:install`
+2) Запустить инфраструктуру (Postgres):
+   - `npm run infra:up`
+3) Запустить API:
+   - `npm run api:dev`
+4) Запустить Web (Nuxt):
+   - `npm run web:dev`
+
+Подробности см. `docs/Runbook.md`.
 
 ## Скрипты
-- `npm run dev` — запуск dev окружения (Docker Compose).
-- `npm run dev:ps` — статус сервисов.
-- `npm run dev:logs` — логи базы.
-- `npm run dev:down` — остановка dev (данные сохраняются).
-- `npm run dev:reset` — сброс dev (удаляет данные БД).
-- `npm run dev:restart` — перезапуск dev.
+- `npm run api:install` - установка зависимостей API (apps/api).
+- `npm run web:install` - установка зависимостей Web (apps/web).
+- `npm run api:dev` - dev только API.
+- `npm run web:dev` - dev только Web.
+- `npm run infra:up` - запуск инфраструктуры (Docker Compose).
+- `npm run infra:ps` - статус сервисов.
+- `npm run infra:logs:db` - логи базы.
+- `npm run infra:down` - остановка dev (данные сохраняются).
+- `npm run infra:reset` - сброс dev (удаляет данные БД).
+- `npm run infra:restart` - перезапуск dev.
 
 ## Структура репозитория
 - `apps/` — приложения (frontend/backend и т.п.).

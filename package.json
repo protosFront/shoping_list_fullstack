@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "workspaces": [
-    "apps/*"
-  ],
   "scripts": {
-    "dev": "npm run infra:up && npm run api:dev",
-    
-    "api:dev": "npm run --workspace apps/api dev",
+    "api:install": "npm --prefix apps/api install",
+    "api:dev": "npm --prefix apps/api run dev",
+    "web:install": "npm --prefix apps/web install",
+    "web:dev": "npm --prefix apps/web run dev",
 
     "dev:down": "npm run infra:down",
     "dev:reset": "npm run infra:reset",
